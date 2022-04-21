@@ -1,0 +1,19 @@
+{
+  "version": "3.5.999.0",
+  "description": "SurfShark - Secure your digital life",
+  "url": "https://downloads.surfshark.com/windows/latest/SurfsharkSetup.exe",
+  "hash": "b3c61dfb268ffdbe5a016c057f7c61506c9612d6377dc08d0441ad40834380c8",
+  "installer": {
+    "script": [
+      "Invoke-ExternalCommand \"$dir\\SurfSharkSetup.exe\" -ArgumentList @('/qn', '/norestart') -RunAs | Out-Null"
+    ]
+  },
+  "uninstaller": {
+    "script": [
+      "Write-Host 'Uninstalling SurfShark TAP Driver ...'",
+      "Invoke-ExternalCommand \"msiexec\" -ArgumentList @('/x', '{2F5D753E-329B-4BE7-BD58-360214A493CB}', '/qn') -RunAs | Out-Null",
+      "Write-Host 'Uninstalling SurfShark ...'",
+      "Invoke-ExternalCommand \"msiexec\" -ArgumentList @('/x', '{5415EDE6-7F7C-463A-8B60-FE600D7B03B6}', '/qn') -RunAs | Out-Null"
+    ]
+  }
+}
