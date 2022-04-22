@@ -2,7 +2,7 @@
   "version": "3.5.999.0",
   "description": "SurfShark - Secure your digital life",
   "url": "https://downloads.surfshark.com/windows/latest/SurfsharkSetup.exe",
-  "hash": "b3c61dfb268ffdbe5a016c057f7c61506c9612d6377dc08d0441ad40834380c8",
+  "hash": "962e7f4c8ca302b565accd241912cd76a00ba6b4b9b7b83d3149d9cfed991666",
   "installer": {
     "script": [
       "Invoke-ExternalCommand \"$dir\\SurfSharkSetup.exe\" -ArgumentList @('/qn', '/norestart') -RunAs | Out-Null"
