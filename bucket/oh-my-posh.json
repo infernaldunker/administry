@@ -1,0 +1,34 @@
+{
+  "version": "7.70.1",
+  "description": "A prompt theme engine for any shell",
+  "homepage": "https://ohmyposh.dev",
+  "license": {
+      "identifier": "MIT",
+      "url": "https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/COPYING"
+  },
+  "architecture": {
+      "64bit": {
+          "url": "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v7.70.1/posh-windows-amd64.7z",
+          "hash": "E0C8BCFFBBBF124B69F69A97B13330D1E331405D1C7097CA2C5D0A8E9388361D"
+      }
+  },
+  "env_add_path": "bin",
+  "checkver": {
+      "github": "https://github.com/JanDeDobbeleer/oh-my-posh"
+  },
+  "post_install": [
+      "Write-Host 'Thanks for installing Oh My Posh.'",
+      "Write-Host 'Have a look at https://ohmyposh.dev for detailed instructions for your shell.'"
+  ],
+  "autoupdate": {
+      "architecture": {
+          "64bit": {
+              "url": "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$version/posh-windows-amd64.7z",
+              "hash": {
+                  "url": "$url.sha256"
+              }
+          }
+      }
+  }
+}
+
